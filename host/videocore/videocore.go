@@ -20,8 +20,8 @@ import (
 	"sync"
 	"unsafe"
 
-	"periph.io/x/periph/host/fs"
-	"periph.io/x/periph/host/pmem"
+	"github.com/pcjacobse/periph/host/fs"
+	"github.com/pcjacobse/periph/host/pmem"
 )
 
 // Mem represents contiguous physically locked memory that was allocated by

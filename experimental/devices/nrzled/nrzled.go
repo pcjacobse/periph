@@ -11,9 +11,9 @@ import (
 	"image/color"
 	"time"
 
-	"periph.io/x/periph/conn"
-	"periph.io/x/periph/conn/gpio/gpiostream"
-	"periph.io/x/periph/devices"
+	"github.com/pcjacobse/periph/conn"
+	"github.com/pcjacobse/periph/conn/gpio/gpiostream"
+	"github.com/pcjacobse/periph/devices"
 )
 
 // NRZ converts a byte into the MSB-first Non-Return-to-Zero encoded 24 bits.

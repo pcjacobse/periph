@@ -21,8 +21,8 @@ import (
 	"log"
 	"os"
 
-	"periph.io/x/periph"
-	"periph.io/x/periph/host/pmem"
+	"github.com/pcjacobse/periph"
+	"github.com/pcjacobse/periph/host/pmem"
 )
 
 // dmaMap represents the DMA memory mapped CPU registers.

@@ -7,9 +7,9 @@ package pinreg
 import (
 	"testing"
 
-	"periph.io/x/periph/conn/gpio"
-	"periph.io/x/periph/conn/gpio/gpiotest"
-	"periph.io/x/periph/conn/pin"
+	"github.com/pcjacobse/periph/conn/gpio"
+	"github.com/pcjacobse/periph/conn/gpio/gpiotest"
+	"github.com/pcjacobse/periph/conn/pin"
 )
 
 func TestAll(t *testing.T) {

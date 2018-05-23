@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"periph.io/x/periph/conn/gpio/gpiostream"
+	"github.com/pcjacobse/periph/conn/gpio/gpiostream"
 )
 
 func TestRaster32Bits(t *testing.T) {

@@ -12,11 +12,11 @@ import (
 	"strconv"
 	"strings"
 
-	"periph.io/x/periph/conn/gpio/gpioreg"
-	"periph.io/x/periph/conn/spi/spireg"
-	"periph.io/x/periph/experimental/devices/mfrc522"
-	"periph.io/x/periph/experimental/devices/mfrc522/commands"
-	"periph.io/x/periph/host"
+	"github.com/pcjacobse/periph/conn/gpio/gpioreg"
+	"github.com/pcjacobse/periph/conn/spi/spireg"
+	"github.com/pcjacobse/periph/experimental/devices/mfrc522"
+	"github.com/pcjacobse/periph/experimental/devices/mfrc522/commands"
+	"github.com/pcjacobse/periph/host"
 )
 
 func mainImpl() error {

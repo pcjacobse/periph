@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	"periph.io/x/periph/conn/gpio"
-	"periph.io/x/periph/conn/gpio/gpioreg"
+	"github.com/pcjacobse/periph/conn/gpio"
+	"github.com/pcjacobse/periph/conn/gpio/gpioreg"
 )
 
 func TestPin(t *testing.T) {

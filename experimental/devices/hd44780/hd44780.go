@@ -13,8 +13,8 @@ import (
 	"fmt"
 	"time"
 
-	"periph.io/x/periph/conn"
-	"periph.io/x/periph/conn/gpio"
+	"github.com/pcjacobse/periph/conn"
+	"github.com/pcjacobse/periph/conn/gpio"
 )
 
 // lineTwo offset for the second line in the LCD buffer.

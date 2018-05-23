@@ -11,8 +11,8 @@ import (
 	"image/color"
 	"image/draw"
 
-	"periph.io/x/periph/conn"
-	"periph.io/x/periph/devices"
+	"github.com/pcjacobse/periph/conn"
+	"github.com/pcjacobse/periph/devices"
 )
 
 // Display is a fake devices.Display.

@@ -20,12 +20,12 @@ import (
 	"errors"
 	"strings"
 
-	"periph.io/x/periph"
-	"periph.io/x/periph/conn/gpio"
-	"periph.io/x/periph/conn/pin"
-	"periph.io/x/periph/conn/pin/pinreg"
-	"periph.io/x/periph/host/distro"
-	"periph.io/x/periph/host/sysfs"
+	"github.com/pcjacobse/periph"
+	"github.com/pcjacobse/periph/conn/gpio"
+	"github.com/pcjacobse/periph/conn/pin"
+	"github.com/pcjacobse/periph/conn/pin/pinreg"
+	"github.com/pcjacobse/periph/host/distro"
+	"github.com/pcjacobse/periph/host/sysfs"
 )
 
 var (

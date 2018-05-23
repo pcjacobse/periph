@@ -7,7 +7,7 @@ package pin_test
 import (
 	"fmt"
 
-	"periph.io/x/periph/conn/pin"
+	"github.com/pcjacobse/periph/conn/pin"
 )
 
 func ExampleBasicPin() {

@@ -10,8 +10,8 @@ package allwinner
 import (
 	"strings"
 
-	"periph.io/x/periph/conn/gpio/gpioreg"
-	"periph.io/x/periph/conn/pin"
+	"github.com/pcjacobse/periph/conn/gpio/gpioreg"
+	"github.com/pcjacobse/periph/conn/pin"
 )
 
 // A64 specific pins.

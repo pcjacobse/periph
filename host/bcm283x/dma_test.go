@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"periph.io/x/periph/conn/gpio/gpiostream"
+	"github.com/pcjacobse/periph/conn/gpio/gpiostream"
 )
 
 func TestDmaStatus_String(t *testing.T) {

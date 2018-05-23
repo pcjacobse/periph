@@ -12,8 +12,8 @@ import (
 	"testing"
 	"time"
 
-	"periph.io/x/periph/conn/gpio/gpiostream"
-	"periph.io/x/periph/conn/gpio/gpiostream/gpiostreamtest"
+	"github.com/pcjacobse/periph/conn/gpio/gpiostream"
+	"github.com/pcjacobse/periph/conn/gpio/gpiostream/gpiostreamtest"
 )
 
 func TestNRZ(t *testing.T) {

@@ -10,9 +10,9 @@ import (
 	"image"
 	"image/color"
 
-	"periph.io/x/periph/conn"
-	"periph.io/x/periph/conn/spi"
-	"periph.io/x/periph/devices"
+	"github.com/pcjacobse/periph/conn"
+	"github.com/pcjacobse/periph/conn/spi"
+	"github.com/pcjacobse/periph/devices"
 )
 
 // ToRGB converts a slice of color.NRGBA to a byte stream of RGB pixels.
@@ -37,11 +37,12 @@ func ToRGB(p []color.NRGBA) []byte {
 // As per APA102-C spec, the chip's max refresh rate is 400hz.
 // https://en.wikipedia.org/wiki/Flicker_fusion_threshold is a recommended
 // reading.
-func New(p spi.Port, numPixels int, intensity uint8, temperature uint16) (*Dev, error) {
+func New(p spi.Port, width int, height int, intensity uint8, temperature uint16) (*Dev, error) {
 	c, err := p.Connect(20000000, spi.Mode3, 8)
 	if err != nil {
 		return nil, err
 	}
+	numPixels := width * height
 	// End frames are needed to be able to push enough SPI clock signals due to
 	// internal half-delay of data signal from each individual LED. See
 	// https://cpldcpu.wordpress.com/2014/11/30/understanding-the-apa102-superled/
@@ -57,6 +58,8 @@ func New(p spi.Port, numPixels int, intensity uint8, temperature uint16) (*Dev, 
 		numPixels:   numPixels,
 		rawBuf:      buf,
 		pixels:      buf[4 : 4+4*numPixels],
+		width:       width,
+		height:      height,
 	}, nil
 }
 
@@ -71,6 +74,8 @@ type Dev struct {
 	s           spi.Conn //
 	l           lut      // Updated at each .Write() call.
 	numPixels   int      //
+	width       int      //
+	height      int      //
 	rawBuf      []byte   // Raw buffer sent over SPI. Cached to reduce heap fragmentation.
 	pixels      []byte   // Double buffer of pixels, to enable partial painting via Draw(). Effectively points inside rawBuf.
 }
@@ -87,7 +92,7 @@ func (d *Dev) ColorModel() color.Model {
 
 // Bounds implements devices.Display. Min is guaranteed to be {0, 0}.
 func (d *Dev) Bounds() image.Rectangle {
-	return image.Rectangle{Max: image.Point{X: d.numPixels, Y: 1}}
+	return image.Rectangle{Max: image.Point{X: d.width, Y: d.height}}
 }
 
 // Draw implements devices.Display.
@@ -277,31 +282,37 @@ func (l *lut) rasterImg(dst []byte, r image.Rectangle, src image.Image, srcR ima
 	deltaX4 := 4 * (r.Min.X - srcR.Min.X)
 	if img, ok := src.(*image.NRGBA); ok {
 		// Fast path for image.NRGBA.
-		pix := img.Pix[srcR.Min.Y*img.Stride:]
-		for sX := srcR.Min.X; sX < srcR.Max.X; sX++ {
-			sX4 := 4 * sX
-			r := l.r[pix[sX4]]
-			g := l.g[pix[sX4+1]]
-			b := l.b[pix[sX4+2]]
-			m := r | g | b
-			rX := sX4 + deltaX4
-			if m <= 1023 {
-				if m <= 255 {
-					dst[rX], dst[rX+1], dst[rX+2], dst[rX+3] = byte(0xE0+1), byte(b), byte(g), byte(r)
-				} else if m <= 511 {
-					dst[rX], dst[rX+1], dst[rX+2], dst[rX+3] = byte(0xE0+2), byte(b>>1), byte(g>>1), byte(r>>1)
-				} else {
-					dst[rX], dst[rX+1], dst[rX+2], dst[rX+3] = byte(0xE0+4), byte((b+2)>>2), byte((g+2)>>2), byte((r+2)>>2)
+		for sY := srcR.Min.Y; sY < srcR.Max.Y; sY++ {
+			yOffset := sY*img.Stride
+			pix := img.Pix[yOffset:]
+			for sX := srcR.Min.X; sX < srcR.Max.X; sX++ {
+				sX4 := 4 * sX
+				r := l.r[pix[sX4]]
+				g := l.g[pix[sX4+1]]
+				b := l.b[pix[sX4+2]]
+				m := r | g | b
+				x := sX4 + deltaX4
+				rX := yOffset + x
+				if sY % 2 == 1 {
+					rX = yOffset + img.Stride - 4 - x
 				}
-			} else {
-				// In this case we need to use a ramp of 255-1 even for lower colors.
-				dst[rX], dst[rX+1], dst[rX+2], dst[rX+3] = byte(0xE0+31), byte((b+15)/31), byte((g+15)/31), byte((r+15)/31)
+				if m <= 1023 {
+					if m <= 255 {
+						dst[rX], dst[rX+1], dst[rX+2], dst[rX+3] = byte(0xE0+1), byte(b), byte(g), byte(r)
+					} else if m <= 511 {
+						dst[rX], dst[rX+1], dst[rX+2], dst[rX+3] = byte(0xE0+2), byte(b>>1), byte(g>>1), byte(r>>1)
+					} else {
+						dst[rX], dst[rX+1], dst[rX+2], dst[rX+3] = byte(0xE0+4), byte((b+2)>>2), byte((g+2)>>2), byte((r+2)>>2)
+					}
+				} else {
+					// In this case we need to use a ramp of 255-1 even for lower colors.
+					dst[rX], dst[rX+1], dst[rX+2], dst[rX+3] = byte(0xE0+31), byte((b+15)/31), byte((g+15)/31), byte((r+15)/31)
+				}
 			}
 		}
 	} else {
 		// Generic version.
 		for sX := srcR.Min.X; sX < srcR.Max.X; sX++ {
-			// This causes a memory allocation. There's no way around it.
 			r16, g16, b16, _ := src.At(sX, srcR.Min.Y).RGBA()
 			r := l.r[byte(r16>>8)]
 			g := l.g[byte(g16>>8)]

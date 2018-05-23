@@ -8,9 +8,9 @@ import (
 	"testing"
 	"time"
 
-	"periph.io/x/periph/conn/gpio"
-	"periph.io/x/periph/host/pmem"
-	"periph.io/x/periph/host/videocore"
+	"github.com/pcjacobse/periph/conn/gpio"
+	"github.com/pcjacobse/periph/host/pmem"
+	"github.com/pcjacobse/periph/host/videocore"
 )
 
 func TestPresent(t *testing.T) {

@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	"periph.io/x/periph/conn/i2c/i2ctest"
-	"periph.io/x/periph/devices"
+	"github.com/pcjacobse/periph/conn/i2c/i2ctest"
+	"github.com/pcjacobse/periph/devices"
 )
 
 var opts180 = &Opts{Temperature: O1x, Pressure: O1x}

@@ -26,13 +26,13 @@ import (
 	"sync"
 	"time"
 
-	"periph.io/x/periph/conn"
-	"periph.io/x/periph/conn/gpio"
-	"periph.io/x/periph/conn/i2c"
-	"periph.io/x/periph/conn/spi"
-	"periph.io/x/periph/devices"
-	"periph.io/x/periph/devices/lepton/cci"
-	"periph.io/x/periph/devices/lepton/internal"
+	"github.com/pcjacobse/periph/conn"
+	"github.com/pcjacobse/periph/conn/gpio"
+	"github.com/pcjacobse/periph/conn/i2c"
+	"github.com/pcjacobse/periph/conn/spi"
+	"github.com/pcjacobse/periph/devices"
+	"github.com/pcjacobse/periph/devices/lepton/cci"
+	"github.com/pcjacobse/periph/devices/lepton/internal"
 )
 
 // Metadata is constructed from telemetry data, which is sent with each frame.

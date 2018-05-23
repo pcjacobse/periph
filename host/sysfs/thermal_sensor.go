@@ -14,8 +14,8 @@ import (
 	"sync"
 	"time"
 
-	"periph.io/x/periph"
-	"periph.io/x/periph/devices"
+	"github.com/pcjacobse/periph"
+	"github.com/pcjacobse/periph/devices"
 )
 
 // ThermalSensors is all the sensors discovered on this host via sysfs.

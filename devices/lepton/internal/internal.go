@@ -8,7 +8,7 @@ import (
 	"encoding/binary"
 	"time"
 
-	"periph.io/x/periph/devices"
+	"github.com/pcjacobse/periph/devices"
 )
 
 // Flag is used in FFCMode.

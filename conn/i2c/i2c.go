@@ -19,8 +19,8 @@ import (
 	"fmt"
 	"io"
 
-	"periph.io/x/periph/conn"
-	"periph.io/x/periph/conn/gpio"
+	"github.com/pcjacobse/periph/conn"
+	"github.com/pcjacobse/periph/conn/gpio"
 )
 
 // Bus defines the interface a concrete I²C driver must implement.

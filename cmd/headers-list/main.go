@@ -15,9 +15,9 @@ import (
 	"os"
 	"sort"
 
-	"periph.io/x/periph"
-	"periph.io/x/periph/conn/pin"
-	"periph.io/x/periph/conn/pin/pinreg"
+	"github.com/pcjacobse/periph"
+	"github.com/pcjacobse/periph/conn/pin"
+	"github.com/pcjacobse/periph/conn/pin/pinreg"
 )
 
 func printFailures(state *periph.State) {

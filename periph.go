@@ -54,7 +54,7 @@
 // i.e. I²C, SPI, GPIO, etc.
 //
 // host/ is allowed to import from conn/ only.
-package periph // import "periph.io/x/periph"
+package periph // import "github.com/pcjacobse/periph"
 
 import (
 	"errors"

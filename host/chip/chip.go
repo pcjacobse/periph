@@ -13,14 +13,14 @@ import (
 	"strconv"
 	"strings"
 
-	"periph.io/x/periph"
-	"periph.io/x/periph/conn/gpio"
-	"periph.io/x/periph/conn/gpio/gpioreg"
-	"periph.io/x/periph/conn/pin"
-	"periph.io/x/periph/conn/pin/pinreg"
-	"periph.io/x/periph/host/allwinner"
-	"periph.io/x/periph/host/distro"
-	"periph.io/x/periph/host/fs"
+	"github.com/pcjacobse/periph"
+	"github.com/pcjacobse/periph/conn/gpio"
+	"github.com/pcjacobse/periph/conn/gpio/gpioreg"
+	"github.com/pcjacobse/periph/conn/pin"
+	"github.com/pcjacobse/periph/conn/pin/pinreg"
+	"github.com/pcjacobse/periph/host/allwinner"
+	"github.com/pcjacobse/periph/host/distro"
+	"github.com/pcjacobse/periph/host/fs"
 )
 
 // C.H.I.P. hardware pins.

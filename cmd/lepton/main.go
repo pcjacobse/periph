@@ -17,11 +17,11 @@ import (
 	"log"
 	"os"
 
-	"periph.io/x/periph/conn/gpio"
-	"periph.io/x/periph/conn/gpio/gpioreg"
-	"periph.io/x/periph/conn/i2c/i2creg"
-	"periph.io/x/periph/conn/spi/spireg"
-	"periph.io/x/periph/devices/lepton"
+	"github.com/pcjacobse/periph/conn/gpio"
+	"github.com/pcjacobse/periph/conn/gpio/gpioreg"
+	"github.com/pcjacobse/periph/conn/i2c/i2creg"
+	"github.com/pcjacobse/periph/conn/spi/spireg"
+	"github.com/pcjacobse/periph/devices/lepton"
 )
 
 var palette = []color.NRGBA{

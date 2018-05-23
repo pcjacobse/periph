@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"time"
 
-	"periph.io/x/periph/conn/physic"
+	"github.com/pcjacobse/periph/conn/physic"
 )
 
 func ExampleDistance() {

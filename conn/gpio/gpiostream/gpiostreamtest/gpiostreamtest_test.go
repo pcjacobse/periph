@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"periph.io/x/periph/conn/conntest"
-	"periph.io/x/periph/conn/gpio"
-	"periph.io/x/periph/conn/gpio/gpiostream"
+	"github.com/pcjacobse/periph/conn/conntest"
+	"github.com/pcjacobse/periph/conn/gpio"
+	"github.com/pcjacobse/periph/conn/gpio/gpiostream"
 )
 
 // PinInLSB

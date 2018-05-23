@@ -9,8 +9,8 @@ import (
 	"sort"
 	"testing"
 
-	"periph.io/x/periph/conn"
-	"periph.io/x/periph/experimental/conn/uart"
+	"github.com/pcjacobse/periph/conn"
+	"github.com/pcjacobse/periph/experimental/conn/uart"
 )
 
 func TestOpen(t *testing.T) {

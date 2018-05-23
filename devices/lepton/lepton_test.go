@@ -13,15 +13,15 @@ import (
 	"image/color"
 	"testing"
 
-	"periph.io/x/periph/conn"
-	"periph.io/x/periph/conn/conntest"
-	"periph.io/x/periph/conn/gpio"
-	"periph.io/x/periph/conn/gpio/gpiotest"
-	"periph.io/x/periph/conn/i2c/i2ctest"
-	"periph.io/x/periph/conn/spi"
-	"periph.io/x/periph/conn/spi/spitest"
-	"periph.io/x/periph/devices"
-	"periph.io/x/periph/devices/lepton/internal"
+	"github.com/pcjacobse/periph/conn"
+	"github.com/pcjacobse/periph/conn/conntest"
+	"github.com/pcjacobse/periph/conn/gpio"
+	"github.com/pcjacobse/periph/conn/gpio/gpiotest"
+	"github.com/pcjacobse/periph/conn/i2c/i2ctest"
+	"github.com/pcjacobse/periph/conn/spi"
+	"github.com/pcjacobse/periph/conn/spi/spitest"
+	"github.com/pcjacobse/periph/devices"
+	"github.com/pcjacobse/periph/devices/lepton/internal"
 )
 
 func TestNew_cs(t *testing.T) {

@@ -48,10 +48,10 @@ import (
 	"strings"
 	"time"
 
-	"periph.io/x/periph"
-	"periph.io/x/periph/conn/gpio/gpiostream"
-	"periph.io/x/periph/host/pmem"
-	"periph.io/x/periph/host/videocore"
+	"github.com/pcjacobse/periph"
+	"github.com/pcjacobse/periph/conn/gpio/gpiostream"
+	"github.com/pcjacobse/periph/host/pmem"
+	"github.com/pcjacobse/periph/host/videocore"
 )
 
 const (

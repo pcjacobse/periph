@@ -12,14 +12,14 @@ import (
 	"flag"
 	"fmt"
 
-	"periph.io/x/periph/conn/i2c"
-	"periph.io/x/periph/conn/i2c/i2creg"
-	"periph.io/x/periph/conn/i2c/i2ctest"
-	"periph.io/x/periph/conn/spi"
-	"periph.io/x/periph/conn/spi/spireg"
-	"periph.io/x/periph/conn/spi/spitest"
-	"periph.io/x/periph/devices"
-	"periph.io/x/periph/devices/bmxx80"
+	"github.com/pcjacobse/periph/conn/i2c"
+	"github.com/pcjacobse/periph/conn/i2c/i2creg"
+	"github.com/pcjacobse/periph/conn/i2c/i2ctest"
+	"github.com/pcjacobse/periph/conn/spi"
+	"github.com/pcjacobse/periph/conn/spi/spireg"
+	"github.com/pcjacobse/periph/conn/spi/spitest"
+	"github.com/pcjacobse/periph/devices"
+	"github.com/pcjacobse/periph/devices/bmxx80"
 )
 
 // SmokeTest is imported by periph-smoketest.

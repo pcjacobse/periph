@@ -8,9 +8,9 @@ import (
 	"io"
 	"testing"
 
-	"periph.io/x/periph/conn"
-	"periph.io/x/periph/conn/gpio"
-	"periph.io/x/periph/conn/spi"
+	"github.com/pcjacobse/periph/conn"
+	"github.com/pcjacobse/periph/conn/gpio"
+	"github.com/pcjacobse/periph/conn/spi"
 )
 
 func TestNewSPI(t *testing.T) {

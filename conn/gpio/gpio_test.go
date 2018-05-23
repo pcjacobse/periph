@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"periph.io/x/periph/conn"
+	"github.com/pcjacobse/periph/conn"
 )
 
 func TestStrings(t *testing.T) {

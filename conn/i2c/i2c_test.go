@@ -9,7 +9,7 @@ import (
 	"errors"
 	"testing"
 
-	"periph.io/x/periph/conn"
+	"github.com/pcjacobse/periph/conn"
 )
 
 func TestDevString(t *testing.T) {

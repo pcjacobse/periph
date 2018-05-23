@@ -13,11 +13,11 @@ import (
 	"strings"
 	"time"
 
-	"periph.io/x/periph"
-	"periph.io/x/periph/conn/gpio"
-	"periph.io/x/periph/conn/gpio/gpioreg"
-	"periph.io/x/periph/host/pmem"
-	"periph.io/x/periph/host/sysfs"
+	"github.com/pcjacobse/periph"
+	"github.com/pcjacobse/periph/conn/gpio"
+	"github.com/pcjacobse/periph/conn/gpio/gpioreg"
+	"github.com/pcjacobse/periph/host/pmem"
+	"github.com/pcjacobse/periph/host/sysfs"
 )
 
 // All the pins in the PL group.

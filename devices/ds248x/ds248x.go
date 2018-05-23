@@ -17,9 +17,9 @@ import (
 	"sync"
 	"time"
 
-	"periph.io/x/periph/conn"
-	"periph.io/x/periph/conn/i2c"
-	"periph.io/x/periph/conn/onewire"
+	"github.com/pcjacobse/periph/conn"
+	"github.com/pcjacobse/periph/conn/i2c"
+	"github.com/pcjacobse/periph/conn/onewire"
 )
 
 // PupOhm controls the strength of the passive pull-up resistor

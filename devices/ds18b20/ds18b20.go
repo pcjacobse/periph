@@ -26,9 +26,9 @@ import (
 	"fmt"
 	"time"
 
-	"periph.io/x/periph/conn"
-	"periph.io/x/periph/conn/onewire"
-	"periph.io/x/periph/devices"
+	"github.com/pcjacobse/periph/conn"
+	"github.com/pcjacobse/periph/conn/onewire"
+	"github.com/pcjacobse/periph/devices"
 )
 
 // ConvertAll performs a conversion on all DS18B20 devices on the bus.

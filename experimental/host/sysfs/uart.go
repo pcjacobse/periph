@@ -12,9 +12,9 @@ import (
 	"path/filepath"
 	"strconv"
 
-	"periph.io/x/periph/conn"
-	"periph.io/x/periph/conn/gpio"
-	"periph.io/x/periph/experimental/conn/uart"
+	"github.com/pcjacobse/periph/conn"
+	"github.com/pcjacobse/periph/conn/gpio"
+	"github.com/pcjacobse/periph/experimental/conn/uart"
 )
 
 // EnumerateUART returns the available serial buses.

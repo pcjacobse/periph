@@ -15,11 +15,11 @@ import (
 	"sync"
 	"unsafe"
 
-	"periph.io/x/periph"
-	"periph.io/x/periph/conn/gpio"
-	"periph.io/x/periph/conn/gpio/gpioreg"
-	"periph.io/x/periph/conn/i2c"
-	"periph.io/x/periph/conn/i2c/i2creg"
+	"github.com/pcjacobse/periph"
+	"github.com/pcjacobse/periph/conn/gpio"
+	"github.com/pcjacobse/periph/conn/gpio/gpioreg"
+	"github.com/pcjacobse/periph/conn/i2c"
+	"github.com/pcjacobse/periph/conn/i2c/i2creg"
 )
 
 // SetSpeedHook can be set by a driver to enable changing the I²C buses speed.
@@ -45,11 +45,11 @@ func SetSpeedHook(h func(hz int64) error) error {
 // The resulting object is safe for concurent use.
 //
 // Do not use sysfs.NewI2C() directly as the package sysfs is providing a
-// https://periph.io/x/periph/conn/i2c Linux-specific implementation.
+// https://github.com/pcjacobse/periph/conn/i2c Linux-specific implementation.
 //
 // periph.io works on many OSes!
 //
-// Instead, use https://periph.io/x/periph/conn/i2c/i2creg#Open. This permits
+// Instead, use https://github.com/pcjacobse/periph/conn/i2c/i2creg#Open. This permits
 // it to work on all operating systems, or devices like I²C over USB.
 func NewI2C(busNumber int) (*I2C, error) {
 	if isLinux {

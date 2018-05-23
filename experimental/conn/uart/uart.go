@@ -8,8 +8,8 @@ package uart
 import (
 	"io"
 
-	"periph.io/x/periph/conn"
-	"periph.io/x/periph/conn/gpio"
+	"github.com/pcjacobse/periph/conn"
+	"github.com/pcjacobse/periph/conn/gpio"
 )
 
 // Parity determines the parity bit when transmitting, if any.

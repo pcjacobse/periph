@@ -14,7 +14,7 @@ import (
 	"strings"
 	"time"
 
-	"periph.io/x/periph/conn/pin"
+	"github.com/pcjacobse/periph/conn/pin"
 )
 
 // Interfaces

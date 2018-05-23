@@ -13,7 +13,7 @@ import (
 	"log"
 	"os"
 
-	"periph.io/x/periph"
+	"github.com/pcjacobse/periph"
 )
 
 // driverAfter is an optional function.

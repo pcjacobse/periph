@@ -12,7 +12,7 @@ package gpiostream
 import (
 	"time"
 
-	"periph.io/x/periph/conn/gpio"
+	"github.com/pcjacobse/periph/conn/gpio"
 )
 
 // Stream is the interface to define a generic stream.

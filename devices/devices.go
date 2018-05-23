@@ -10,7 +10,7 @@ import (
 	"io"
 	"time"
 
-	"periph.io/x/periph/conn"
+	"github.com/pcjacobse/periph/conn"
 )
 
 // Device is a basic device.

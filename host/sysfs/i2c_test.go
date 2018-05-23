@@ -7,7 +7,7 @@ package sysfs
 import (
 	"testing"
 
-	"periph.io/x/periph/conn/i2c/i2creg"
+	"github.com/pcjacobse/periph/conn/i2c/i2creg"
 )
 
 func TestNewI2C(t *testing.T) {

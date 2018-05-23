@@ -16,12 +16,12 @@ import (
 	"strings"
 	"time"
 
-	"periph.io/x/periph"
-	"periph.io/x/periph/conn/gpio"
-	"periph.io/x/periph/conn/gpio/gpioreg"
-	"periph.io/x/periph/conn/physic"
-	"periph.io/x/periph/host/pmem"
-	"periph.io/x/periph/host/sysfs"
+	"github.com/pcjacobse/periph"
+	"github.com/pcjacobse/periph/conn/gpio"
+	"github.com/pcjacobse/periph/conn/gpio/gpioreg"
+	"github.com/pcjacobse/periph/conn/physic"
+	"github.com/pcjacobse/periph/host/pmem"
+	"github.com/pcjacobse/periph/host/sysfs"
 )
 
 // List of all known pins. These global variables can be used directly.

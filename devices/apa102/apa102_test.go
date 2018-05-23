@@ -13,9 +13,9 @@ import (
 	"io/ioutil"
 	"testing"
 
-	"periph.io/x/periph/conn/conntest"
-	"periph.io/x/periph/conn/spi"
-	"periph.io/x/periph/conn/spi/spitest"
+	"github.com/pcjacobse/periph/conn/conntest"
+	"github.com/pcjacobse/periph/conn/spi"
+	"github.com/pcjacobse/periph/conn/spi/spitest"
 )
 
 func TestRamp(t *testing.T) {

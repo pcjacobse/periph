@@ -13,10 +13,10 @@ import (
 	"fmt"
 	"time"
 
-	"periph.io/x/periph/conn"
-	"periph.io/x/periph/conn/gpio"
-	"periph.io/x/periph/conn/spi"
-	"periph.io/x/periph/experimental/devices/mfrc522/commands"
+	"github.com/pcjacobse/periph/conn"
+	"github.com/pcjacobse/periph/conn/gpio"
+	"github.com/pcjacobse/periph/conn/spi"
+	"github.com/pcjacobse/periph/experimental/devices/mfrc522/commands"
 )
 
 // BlockAccess defines the block access bits.

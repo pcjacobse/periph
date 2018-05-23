@@ -17,13 +17,13 @@ import (
 	"sync"
 	"unsafe"
 
-	"periph.io/x/periph"
-	"periph.io/x/periph/conn"
-	"periph.io/x/periph/conn/gpio"
-	"periph.io/x/periph/conn/gpio/gpioreg"
-	"periph.io/x/periph/conn/spi"
-	"periph.io/x/periph/conn/spi/spireg"
-	"periph.io/x/periph/host/fs"
+	"github.com/pcjacobse/periph"
+	"github.com/pcjacobse/periph/conn"
+	"github.com/pcjacobse/periph/conn/gpio"
+	"github.com/pcjacobse/periph/conn/gpio/gpioreg"
+	"github.com/pcjacobse/periph/conn/spi"
+	"github.com/pcjacobse/periph/conn/spi/spireg"
+	"github.com/pcjacobse/periph/host/fs"
 )
 
 // NewSPI opens a SPI port via its devfs interface as described at
@@ -36,11 +36,11 @@ import (
 // /dev/spidev0.1, busNumber should be 0 and chipSelect should be 1.
 //
 // Do not use sysfs.NewSPI() directly as the package sysfs is providing a
-// https://periph.io/x/periph/conn/spi Linux-specific implementation.
+// https://github.com/pcjacobse/periph/conn/spi Linux-specific implementation.
 //
 // periph.io works on many OSes!
 //
-// Instead, use https://periph.io/x/periph/conn/spi/spireg#Open. This permits
+// Instead, use https://github.com/pcjacobse/periph/conn/spi/spireg#Open. This permits
 // it to work on all operating systems, or devices like SPI over USB.
 func NewSPI(busNumber, chipSelect int) (*SPI, error) {
 	if isLinux {

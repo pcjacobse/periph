@@ -11,8 +11,8 @@ import (
 	"fmt"
 	"sort"
 
-	"periph.io/x/periph/conn/gpio"
-	"periph.io/x/periph/host/sysfs"
+	"github.com/pcjacobse/periph/conn/gpio"
+	"github.com/pcjacobse/periph/host/sysfs"
 )
 
 // Benchmark is imported by periph-smoketest.

@@ -13,9 +13,9 @@ import (
 	"sync"
 	"time"
 
-	"periph.io/x/periph"
-	"periph.io/x/periph/conn/gpio"
-	"periph.io/x/periph/host/fs"
+	"github.com/pcjacobse/periph"
+	"github.com/pcjacobse/periph/conn/gpio"
+	"github.com/pcjacobse/periph/host/fs"
 )
 
 // LEDs is all the leds discovered on this host via sysfs.

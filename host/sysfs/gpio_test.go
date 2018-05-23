@@ -8,7 +8,7 @@ import (
 	"errors"
 	"testing"
 
-	"periph.io/x/periph/conn/gpio"
+	"github.com/pcjacobse/periph/conn/gpio"
 )
 
 func TestPin_String(t *testing.T) {

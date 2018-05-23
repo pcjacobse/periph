@@ -13,9 +13,9 @@ import (
 	"log"
 	"os"
 
-	"periph.io/x/periph/devices"
-	"periph.io/x/periph/host"
-	"periph.io/x/periph/host/sysfs"
+	"github.com/pcjacobse/periph/devices"
+	"github.com/pcjacobse/periph/host"
+	"github.com/pcjacobse/periph/host/sysfs"
 )
 
 func mainImpl() error {

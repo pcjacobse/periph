@@ -8,8 +8,8 @@ import (
 	"errors"
 	"testing"
 
-	"periph.io/x/periph/conn"
-	"periph.io/x/periph/conn/spi"
+	"github.com/pcjacobse/periph/conn"
+	"github.com/pcjacobse/periph/conn/spi"
 )
 
 func TestOpen(t *testing.T) {

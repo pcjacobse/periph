@@ -17,10 +17,10 @@ import (
 	"sync"
 	"time"
 
-	"periph.io/x/periph/conn"
-	"periph.io/x/periph/conn/gpio"
-	"periph.io/x/periph/conn/spi"
-	"periph.io/x/periph/host/cpu"
+	"github.com/pcjacobse/periph/conn"
+	"github.com/pcjacobse/periph/conn/gpio"
+	"github.com/pcjacobse/periph/conn/spi"
+	"github.com/pcjacobse/periph/host/cpu"
 )
 
 // NewSPI returns an object that communicates SPI over 3 or 4 pins.
